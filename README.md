@@ -1,15 +1,12 @@
 ## Flashcard
 
-📝 `NOTE:` Paste the README templates for each subsequent lab here at the top, (i.e. lab 2, 3, 4). This will show a history of your development process including which users stories you completed and how your app looked and functioned at each step.
-
-## Lab 1
-
-### App Description
+### App Description (Lab 1)
 User can flip the card to learn more about the answer to the question.
 
 ### App Walk-through
 
-<img src="https://imgur.com/hQefAf0.gif" width=200><br>
+[FGif](https://user-images.githubusercontent.com/103079472/189560670-fd90e5a8-fca0-4e31-944e-3543d8b6f5f6.mov)
+
 
 ## Required
 - [x] Create New Project in Xcode

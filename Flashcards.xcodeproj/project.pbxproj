@@ -49,6 +49,7 @@
 		C121C33628CEB1D200C6BE81 /* FlashcardsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FlashcardsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C121C33A28CEB1D200C6BE81 /* FlashcardsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlashcardsUITests.swift; sourceTree = "<group>"; };
 		C121C33C28CEB1D200C6BE81 /* FlashcardsUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlashcardsUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		C121C34928CEC20A00C6BE81 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = Flashcards/README.md; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -123,6 +124,7 @@
 			children = (
 				C121C33A28CEB1D200C6BE81 /* FlashcardsUITests.swift */,
 				C121C33C28CEB1D200C6BE81 /* FlashcardsUITestsLaunchTests.swift */,
+				C121C34928CEC20A00C6BE81 /* README.md */,
 			);
 			path = FlashcardsUITests;
 			sourceTree = "<group>";

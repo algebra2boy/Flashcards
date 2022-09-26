@@ -16,6 +16,7 @@
 		C121C33128CEB1D200C6BE81 /* FlashcardsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C121C33028CEB1D200C6BE81 /* FlashcardsTests.swift */; };
 		C121C33B28CEB1D200C6BE81 /* FlashcardsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C121C33A28CEB1D200C6BE81 /* FlashcardsUITests.swift */; };
 		C121C33D28CEB1D200C6BE81 /* FlashcardsUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C121C33C28CEB1D200C6BE81 /* FlashcardsUITestsLaunchTests.swift */; };
+		C1680F6628E0F823008871B5 /* CreationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1680F6528E0F823008871B5 /* CreationViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,6 +51,8 @@
 		C121C33A28CEB1D200C6BE81 /* FlashcardsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlashcardsUITests.swift; sourceTree = "<group>"; };
 		C121C33C28CEB1D200C6BE81 /* FlashcardsUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlashcardsUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		C121C34928CEC20A00C6BE81 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = Flashcards/README.md; sourceTree = SOURCE_ROOT; };
+		C1680F6528E0F823008871B5 /* CreationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreationViewController.swift; sourceTree = "<group>"; };
+		C1680F6728E132B8008871B5 /* Lab2_toDo.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = Lab2_toDo.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,6 +83,7 @@
 		C121C30D28CEB1CC00C6BE81 = {
 			isa = PBXGroup;
 			children = (
+				C1680F6528E0F823008871B5 /* CreationViewController.swift */,
 				C121C31828CEB1CC00C6BE81 /* Flashcards */,
 				C121C32F28CEB1D200C6BE81 /* FlashcardsTests */,
 				C121C33928CEB1D200C6BE81 /* FlashcardsUITests */,
@@ -124,6 +128,7 @@
 			children = (
 				C121C33A28CEB1D200C6BE81 /* FlashcardsUITests.swift */,
 				C121C33C28CEB1D200C6BE81 /* FlashcardsUITestsLaunchTests.swift */,
+				C1680F6728E132B8008871B5 /* Lab2_toDo.md */,
 				C121C34928CEC20A00C6BE81 /* README.md */,
 			);
 			path = FlashcardsUITests;
@@ -263,6 +268,7 @@
 				C121C31E28CEB1CC00C6BE81 /* ViewController.swift in Sources */,
 				C121C31A28CEB1CC00C6BE81 /* AppDelegate.swift in Sources */,
 				C121C31C28CEB1CC00C6BE81 /* SceneDelegate.swift in Sources */,
+				C1680F6628E0F823008871B5 /* CreationViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

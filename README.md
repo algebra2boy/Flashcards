@@ -5,7 +5,7 @@ User can flip the card to learn more about the answer to the question.
 
 ### App Walk-through
 
-[FGif](https://user-images.githubusercontent.com/103079472/189560670-fd90e5a8-fca0-4e31-944e-3543d8b6f5f6.mov)
+[FGif](https://user-images.githubusercontent.com/103079472/190292001-0b83caf9-df5c-4a1b-b157-2ee0b59117d0.mov)
 
 
 ## Required

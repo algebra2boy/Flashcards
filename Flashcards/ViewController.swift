@@ -88,6 +88,13 @@ class ViewController: UIViewController {
         Button3.isHidden = false
     }
     func updateFlashcard(question: String, answer1: String, answer2: String, answer3: String) {
+        frontLabel.text = question
+        backLabel.text = answer2
+        
+        Button1.setTitle(answer1, for: .normal)
+        Button2.setTitle(answer2, for: .normal)
+        Button3.setTitle(answer3, for: .normal)
+        
         
     }
     

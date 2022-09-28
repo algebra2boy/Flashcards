@@ -33,19 +33,31 @@ class CreationViewController: UIViewController {
     @IBAction func didTapOnDone(_ sender: Any) {
         
         // Get the text in the question text field
-        let questionText = Question.text
+        guard let questionText = Question.text else {return}
         
         // Get the text in the answer text field
-        let answer1Text = Answer1.text
-        let answer2Text = Answer2.text
-        let answer3Text = Answer3.text
+        guard let answer1Text = Answer1.text else {return}
+        guard let answer2Text = Answer2.text else {return}
+        guard let answer3Text = Answer3.text else {return}
         
-        // Call the function to update the flashcard
-        flashcardsController.updateFlashcard(question: questionText!, answer1: answer1Text!, answer2: answer2Text!, answer3: answer3Text!)
-        
-        
-        // Dismiss
-        dismiss(animated: true)
+        // if any of the text field is empty and alert them
+        if (questionText.isEmpty || answer1Text.isEmpty || answer2Text.isEmpty || answer3Text.isEmpty){
+            // customize the alert
+            let alert = UIAlertController(title: "Missing Text Field", message: "Please try to complete all the text field", preferredStyle:.alert)
+            
+            // add ok button to dismiss the screen
+            alert.addAction(UIAlertAction(title: NSLocalizedString("OK", comment: "Default action"), style: .default, handler: { _ in
+            NSLog("The \"OK\" alert occured.")
+            }))
+            
+            // display the alert
+            present(alert, animated: true)
+        }else{
+            // Call the function to update the flashcard
+            flashcardsController.updateFlashcard(question: questionText, answer1: answer1Text, answer2: answer2Text, answer3: answer3Text)
+            // Dismiss
+            dismiss(animated: true)
+        }
         
         
     }

@@ -28,7 +28,12 @@ User can customize their question and answers for the flashcard. The app creates
 ### App Walk-though
 
 
-<img src="YOUR_GIF_URL_HERE" width=200><br>
+
+https://user-images.githubusercontent.com/103079472/192846698-e986eb1c-b11a-4650-857c-c0dc7a646b0f.mov
+
+
+
+
 
 
 ## Required

@@ -53,6 +53,9 @@ class ViewController: UIViewController {
         
         Congrats.isHidden = true
         
+        
+        
+        
 
     }
 
@@ -108,6 +111,14 @@ class ViewController: UIViewController {
         
         // We set the flashcardsController property to self
         creationController.flashcardsController = self
+        
+        // transfer the existing flashcard information the creationview controller
+        if (segue.identifier == "EditSegue") {
+            creationController.initialQuestion = frontLabel.text
+            creationController.initialAnswer1 = Button1.titleLabel?.text
+            creationController.initialAnswer2 = Button2.titleLabel?.text
+            creationController.initialAnswer3 = Button3.titleLabel?.text
+        }
         
         
     }

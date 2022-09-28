@@ -38,7 +38,7 @@ User can customize their question and answers for the flashcard. The app creates
 - [x] Push code to GitHub
 ## Optional
 - [x] User gets an error if they try to create a new flashcard with no question or answer
-- [ ] User can edit existing flashcard
+- [x] User can edit existing flashcard
 - [x] User can add multiple choice answers in the creation screen
 
 

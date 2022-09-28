@@ -38,6 +38,15 @@
                                         <nil key="highlightedColor"/>
                                         <size key="shadowOffset" width="9" height="100"/>
                                     </label>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="E6I-V2-POJ">
+                                        <rect key="frame" x="241" y="84" width="47" height="26"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" title="✏️"/>
+                                        <connections>
+                                            <segue destination="g22-b1-fmt" kind="show" identifier="EditSegue" id="5Ub-aU-E0g"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <gestureRecognizers/>
@@ -102,7 +111,7 @@
                                     <fontDescription key="titleFontDescription" style="UICTFontTextStyleTitle0"/>
                                 </buttonConfiguration>
                                 <connections>
-                                    <segue destination="g22-b1-fmt" kind="presentation" id="6gE-cW-97x"/>
+                                    <segue destination="g22-b1-fmt" kind="presentation" identifier="buttonSegue" id="6gE-cW-97x"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -199,6 +208,7 @@
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="g22-b1-fmt" sceneMemberID="viewController">
                     <toolbarItems/>
+                    <navigationItem key="navigationItem" id="vtw-3D-7S7"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="ZnT-wE-bcF">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="56"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -213,6 +223,9 @@
             <point key="canvasLocation" x="822" y="70"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="5Ub-aU-E0g"/>
+    </inferredMetricsTieBreakers>
     <resources>
         <systemColor name="labelColor">
             <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

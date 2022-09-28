@@ -19,11 +19,22 @@ class CreationViewController: UIViewController {
     @IBOutlet weak var Answer2: UITextField!
     @IBOutlet weak var Answer3: UITextField!
     
+    // the editing part (? because we are not sure if they are nil)
+    var initialQuestion: String?
+    var initialAnswer1: String?
+    var initialAnswer2: String?
+    var initialAnswer3: String?
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        Question.text = initialQuestion
+        Answer1.text = initialAnswer1
+        Answer2.text = initialAnswer2
+        Answer3.text = initialAnswer3
+        
+        
     }
     
     @IBAction func disTapOnCancel(_ sender: Any) {

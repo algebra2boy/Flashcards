@@ -57,6 +57,8 @@ Previous flashcards are saved on the disk.
 
 ### App Walk-though
 
+https://user-images.githubusercontent.com/103079472/194996971-8522f1d5-c609-4868-98b8-9de8cca3b5e6.mp4
+
 
 ## Required
 - [x] User can browse through multiple flashcards

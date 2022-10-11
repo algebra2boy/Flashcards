@@ -48,3 +48,21 @@ https://user-images.githubusercontent.com/103079472/192846698-e986eb1c-b11a-4650
 
 
 
+
+## Lab 3
+
+### App Description
+Uer can go back and forth for the new flashcards they created and delete their flashcards. 
+Previous flashcards are saved on the disk.
+
+### App Walk-though
+
+
+## Required
+- [x] User can browse through multiple flashcards
+- [x] User can re-open the app and see previously created flashcards
+- [x] Push code to GitHub
+## Optional
+- [x] User can delete a flashcard
+- [x] User can edit existing flashcard
+- [x] User can store multiple choice questions

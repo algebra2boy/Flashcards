@@ -14,12 +14,15 @@ class CreationViewController: UIViewController {
     // viewController is the class type
     var flashcardsController: ViewController!
     
+    // declaring text field
     @IBOutlet weak var Question: UITextField!
     @IBOutlet weak var Answer1: UITextField!
     @IBOutlet weak var Answer2: UITextField!
     @IBOutlet weak var Answer3: UITextField!
     
     // the editing part (? because we are not sure if they are nil)
+    // variables for text field
+    // it could be nil because adding new flashcard would make these var to be nil
     var initialQuestion: String?
     var initialAnswer1: String?
     var initialAnswer2: String?
@@ -29,6 +32,8 @@ class CreationViewController: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        
+        // bring the existing flashcard information to the new page
         Question.text = initialQuestion
         Answer1.text = initialAnswer1
         Answer2.text = initialAnswer2
@@ -64,8 +69,13 @@ class CreationViewController: UIViewController {
             // display the alert
             present(alert, animated: true)
         }else{
+            // see if it is existiing
+            var isExisting = false
+            if initialQuestion != nil {
+                isExisting = true // replace/edit existing flashcard
+            }
             // Call the function to update the flashcard
-            flashcardsController.updateFlashcard(question: questionText, answer1: answer1Text, answer2: answer2Text, answer3: answer3Text)
+            flashcardsController.updateFlashcard(question: questionText, answer1: answer1Text, answer2: answer2Text, answer3: answer3Text, isExisting : isExisting)
             // Dismiss
             dismiss(animated: true)
         }

@@ -15,7 +15,7 @@ struct Flashcard {
 }
 
 class ViewController: UIViewController {
-
+    
     @IBOutlet weak var backLabel: UILabel!
     @IBOutlet weak var frontLabel: UILabel!
     
@@ -87,10 +87,43 @@ class ViewController: UIViewController {
         }
         
     }
-
+    
     @IBAction func disTapOnFlashcard(_ sender: Any) {
-        frontLabel.isHidden = tapped
-        tapped = !tapped
+        flipFlashcard()
+    }
+    
+    /*
+     Animation part!!!!
+     */
+    
+    func flipFlashcard() {
+        // when we use a closure we're required to use self.
+        // adding animation to flip the card
+        UIView.transition(with: card, duration: 0.3, options: .transitionFlipFromLeft, animations: {
+            self.frontLabel.isHidden = self.tapped
+            self.tapped = !self.tapped
+        })
+        
+    }
+    
+    func animateCardOut() {
+        // move the card 300 points the point and make y-axis constant
+        // animatins: move the card off the screen
+        // completion: load the current card to the next card
+        UIView.animate(withDuration: 0.3, animations: {
+            self.card.transform = CGAffineTransform.identity.translatedBy(x: -300.0, y: 0.0)
+        }, completion: { finished in
+            self.animateCardIn()
+        })
+    }
+    
+    // reset the tansform to have no transform, meaning we want to set it to the identity transform
+    func animateCardIn() {
+        
+        UIView.animate(withDuration: 0.3, animations: {
+            self.card.transform = CGAffineTransform.identity
+        })
+    
     }
     
     @IBAction func didTapOne(_ sender: Any) {

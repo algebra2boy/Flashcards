@@ -180,6 +180,7 @@
                         <outlet property="Congrats" destination="UUu-GX-Lu4" id="5ax-Jw-YhQ"/>
                         <outlet property="Reset" destination="GcB-YH-bXh" id="1qM-SR-gH4"/>
                         <outlet property="ResetButton" destination="ycb-Ow-CC0" id="UK0-JS-SMh"/>
+                        <outlet property="addButton" destination="Ewh-eh-YxD" id="eiH-M1-E10"/>
                         <outlet property="backLabel" destination="XmX-8J-sJt" id="bF8-3w-e90"/>
                         <outlet property="button1" destination="Fzf-jK-Dyz" id="T7S-sX-tVE"/>
                         <outlet property="button2" destination="3EG-hy-mbf" id="5PX-9w-net"/>

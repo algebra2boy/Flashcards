@@ -8,6 +8,7 @@
 import UIKit
 
 struct Flashcard {
+    
     var question: String
     var answer1 : String
     var answer2 : String
@@ -34,6 +35,7 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var nextButton: UIButton!
     @IBOutlet weak var deleteButton: UIView!
+    @IBOutlet weak var addButton: UIButton!
     
     // Array to hold our flashcards
     var flashcards = [Flashcard]()
@@ -42,6 +44,54 @@ class ViewController: UIViewController {
     var currentIndex = 0
     
     var tapped = true
+    
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        // First start with the flashcard invisible and slightly smaller in size
+        // alpha level is transparent level
+        card.alpha = 0.0
+        Button1.alpha = 0.0
+        Button2.alpha = 0.0
+        Button3.alpha = 0.0
+        nextButton.alpha = 0.0
+        prevButton.alpha = 0.0
+        addButton.alpha = 0.0
+        
+        // set the card property by 75% on the x and y scale
+        card.transform = CGAffineTransform.identity.scaledBy(x: 0.75, y: 0.75)
+        Button1.transform = CGAffineTransform.identity.scaledBy(x: 0.75, y: 0.75)
+        Button2.transform = CGAffineTransform.identity.scaledBy(x: 0.75, y: 0.75)
+        Button3.transform = CGAffineTransform.identity.scaledBy(x: 0.75, y: 0.75)
+        nextButton.transform = CGAffineTransform.identity.scaledBy(x: 0.75, y: 0.75)
+        prevButton.transform = CGAffineTransform.identity.scaledBy(x: 0.75, y: 0.75)
+        addButton.transform = CGAffineTransform.identity.scaledBy(x: 0.75, y: 0.75)
+        
+        
+        // the 0.75 x 0.75 % card suddenly expands from a small card to a huge card
+        UIView.animate(withDuration: 0.6, delay: 0.5, usingSpringWithDamping: 0.5, initialSpringVelocity: 1, animations: {
+            // make the card totally visible
+            self.card.alpha = 1.0
+            self.Button1.alpha = 1.0
+            self.Button2.alpha = 1.0
+            self.Button3.alpha = 1.0
+            self.nextButton.alpha = 1.0
+            self.prevButton.alpha = 1.0
+            self.addButton.alpha = 1.0
+            
+            // actually shrhink the card
+            self.card.transform = CGAffineTransform.identity
+            self.Button1.transform = CGAffineTransform.identity
+            self.Button2.transform = CGAffineTransform.identity
+            self.Button3.transform = CGAffineTransform.identity
+            self.nextButton.transform = CGAffineTransform.identity
+            self.prevButton.transform = CGAffineTransform.identity
+            self.addButton.transform = CGAffineTransform.identity
+        })
+    }
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
@@ -106,25 +156,72 @@ class ViewController: UIViewController {
         
     }
     
-    func animateCardOut() {
-        // move the card 300 points the point and make y-axis constant
+    /// create special transition effect when switch to the next card
+    func animateCardRightOut() {
+        // move the card 500 points to the left and make y-axis constant
         // animatins: move the card off the screen
-        // completion: load the current card to the next card
-        UIView.animate(withDuration: 0.3, animations: {
-            self.card.transform = CGAffineTransform.identity.translatedBy(x: -300.0, y: 0.0)
+        // completion: after the card is off the screen, load the current card to the next card
+        UIView.animate(withDuration: 0.5, animations: {
+            self.card.transform = CGAffineTransform.identity.translatedBy(x: -500.0, y: 0.0)
         }, completion: { finished in
-            self.animateCardIn()
+            
+            // update labels only after the card is off the screen
+            // Update labels
+            self.updateLabels()
+            
+            // Run other animation
+            self.animateCardRightIn()
         })
     }
     
-    // reset the tansform to have no transform, meaning we want to set it to the identity transform
-    func animateCardIn() {
+    // reset the transform to have no transform, meaning we want to set it to the identity transform
+    func animateCardRightIn() {
         
-        UIView.animate(withDuration: 0.3, animations: {
+        // Start on the right side (don't animate this)
+        // set the card's new position to the original position
+        card.transform = CGAffineTransform.identity.translatedBy(x: 500.0, y: 0.0)
+        
+        // Animate card to its original position
+        UIView.animate(withDuration: 0.5, animations: {
             self.card.transform = CGAffineTransform.identity
         })
     
     }
+    
+    /// create special transition effect when switch to the previous card
+    func animateCardLeftOut() {
+        // move the card 500 points to the right and make y-axis constant
+        // animatins: move the card off the screen
+        // completion: after the card is off the screen, load the current card to the previous card
+        UIView.animate(withDuration: 0.5, animations: {
+            self.card.transform = CGAffineTransform.identity.translatedBy(x: -500.0, y: 0.0)
+        }, completion: { finished in
+            
+            // update labels only after the card is off the screen
+            // Update labels
+            self.updateLabels()
+            
+            // Run other animation
+            self.animateCardLeftIn()
+        })
+    }
+    
+    // reset the transform to have no transform, meaning we want to set it to the identity transform
+    func animateCardLeftIn() {
+        
+        // Start on the left side (don't animate this)
+        // set the card's new position to the original position
+        card.transform = CGAffineTransform.identity.translatedBy(x: -500.0, y: 0.0)
+        
+        // Animate card to its original position
+        UIView.animate(withDuration: 0.5, animations: {
+            self.card.transform = CGAffineTransform.identity
+        })
+    
+    }
+    
+    
+    
     
     @IBAction func didTapOne(_ sender: Any) {
         Button1.isHidden = true
@@ -142,15 +239,13 @@ class ViewController: UIViewController {
     
     
     @IBAction func ResetToOrgin(_ sender: Any) {
+        
         Congrats.isHidden = true
-        sleep(1)
         frontLabel.isHidden = false
-        sleep(1)
         Button1.isHidden = false
-        sleep(1)
         Button2.isHidden = false
-        sleep(1)
         Button3.isHidden = false
+        
     }
     func updateFlashcard(question: String, answer1: String, answer2: String, answer3: String, isExisting: Bool) {
         let flashcard = Flashcard(question: question,
@@ -231,11 +326,11 @@ class ViewController: UIViewController {
         // decrease current index
         currentIndex = currentIndex - 1
         
-        // update labels
-        updateLabels()
-        
         // Update buttons
         updateNextPrevButtons()
+        
+        // Animation on card
+        animateCardLeftOut()
     }
     
     @IBAction func didTapOnNext(_ sender: Any) {
@@ -243,11 +338,11 @@ class ViewController: UIViewController {
         // Increase current index
         currentIndex = currentIndex + 1
         
-        // Update labels
-        updateLabels()
-        
         // Update buttons
         updateNextPrevButtons()
+        
+        // add special animation
+        animateCardRightOut()
     }
     
     func updateLabels() {
@@ -367,4 +462,3 @@ class ViewController: UIViewController {
         saveAllFlashcardsToDisk()
     }
 }
-

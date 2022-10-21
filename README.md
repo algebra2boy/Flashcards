@@ -68,3 +68,26 @@ https://user-images.githubusercontent.com/103079472/194996971-8522f1d5-c609-4868
 - [x] User can delete a flashcard
 - [x] User can edit existing flashcard
 - [x] User can store multiple choice questions
+
+📝 `NOTE` Paste this template at the top of your existing `README.md` file from the last lab.
+
+## Lab 4
+
+### App Description
+Flashcard now can now have autosize feature and fancy animation.
+
+### App Walk-though
+
+<img src="YOUR_GIF_URL_HERE" width=200><br>
+
+## Required
+- [x] User should see the app icon 
+- [x] User should see a splash screen
+- [x] User should see an flip animation when revealing the answer
+- [x] User should see a slide animation when going to the next flashcard
+- [x] User should see a slide animation when going to the previous flashcard
+- [x] Push code to GitHub
+## Optional
+- [x] User should see a nicer flaschard with rounded corners, shadows, and animating when showing the first time
+- [x] User should see all views properly layout when using the app on a phone of different sizes
+- [] Correct answer in multiple choice should be random

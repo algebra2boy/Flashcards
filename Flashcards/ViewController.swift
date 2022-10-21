@@ -237,14 +237,16 @@ class ViewController: UIViewController {
         Button3.isHidden = true
     }
     
-    
-    @IBAction func ResetToOrgin(_ sender: Any) {
-        
+    func resetDefault() {
         Congrats.isHidden = true
         frontLabel.isHidden = false
         Button1.isHidden = false
         Button2.isHidden = false
         Button3.isHidden = false
+    }
+    
+    @IBAction func ResetToOrgin(_ sender: Any) {
+        resetDefault()
         
     }
     func updateFlashcard(question: String, answer1: String, answer2: String, answer3: String, isExisting: Bool) {
@@ -329,6 +331,9 @@ class ViewController: UIViewController {
         // Update buttons
         updateNextPrevButtons()
         
+        // reset the card default
+        resetDefault()
+        
         // Animation on card
         animateCardLeftOut()
     }
@@ -340,6 +345,9 @@ class ViewController: UIViewController {
         
         // Update buttons
         updateNextPrevButtons()
+        
+        // reset the card default
+        resetDefault()
         
         // add special animation
         animateCardRightOut()

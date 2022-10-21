@@ -78,7 +78,7 @@ Flashcard now can now have autosize feature and fancy animation.
 
 ### App Walk-though
 
-<img src="YOUR_GIF_URL_HERE" width=200><br>
+<img src= "https://user-images.githubusercontent.com/103079472/197112757-88ea6770-8b06-4141-9b4c-f601da5fb959.MP4" width=200><br>
 
 ## Required
 - [x] User should see the app icon 
